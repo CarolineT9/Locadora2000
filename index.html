@@ -60,7 +60,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <th class="text-center table-primary" colspan="5" id="#gacao">
+                    <th class="text-center table-primary" colspan="5" id="gacao">
                         Ação
                     </th>
                 </tr>
@@ -73,25 +73,132 @@
                 </tr>
                 <tr>
                     <th scope="row">2</th>
-                    <td scope="col">Título</td>
-                    <td scope="col">Diretor</td>
-                    <td scope="col">Lançamento</td>
-                    <td scope="col">Gênero</td>
+                    <td scope="col">Principe da Pérsia</td>
+                    <td scope="col">Mike Newell</td>
+                    <td scope="col">3 de Junho 20210</td>
+                    <td scope="col">Ação</td>
                 </tr>
                 <tr>
-                    <th class="text-center table-primary" colspan="5" id="#ganim">
+                    <th class="text-center table-primary" colspan="5" id="ganim">
                         Animação
                     </th>
                 </tr>
                 <tr>
                     <th scope="row">3</th>
-                    <td scope="col">Título</td>
-                    <td scope="col">Diretor</td>
-                    <td scope="col">Lançamento</td>
-                    <td scope="col">Gênero</td>
+                    <td scope="col">The House</td>
+                    <td scope="col">Emma De Swaef</td>
+                    <td scope="col"> 14 de janeiro de 2022</td>
+                    <td scope="col">Animação</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td scope="col">Luck</td>
+                    <td scope="col">Peggy Holmes</td>
+                    <td scope="col"> 5 de agosto de 2022</td>
+                    <td scope="col">Animação</td>
+                </tr>
+                <tr>
+                    <th class="text-center table-primary" colspan="5" id="gsus">
+                        Suspense
+                    </th>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td scope="col">Não! Não Olhe!</td>
+                    <td scope="col">Jordan Peele</td>
+                    <td scope="col"> 25 de agosto de 2022</td>
+                    <td scope="col">Suspense</td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td scope="col">O Céu da Meia-Noite</td>
+                    <td scope="col">George Clooney</td>
+                    <td scope="col"> 23 de dezembro de 2020</td>
+                    <td scope="col">Suspense</td>
+                </tr>
+                <tr>
+                    <th class="text-center table-primary" colspan="5" id="gsus">
+                        Romance
+                    </th>
+                </tr>
+                <tr>
+                    <th scope="row">7</th>
+                    <td scope="col">Foi Apenas um Sonho</td>
+                    <td scope="col">Sam Mendes</td>
+                    <td scope="col">  30 de janeiro de 2009</td>
+                    <td scope="col">Romance</td>
+                </tr>
+                <tr>
+                    <th scope="row">8</th>
+                    <td scope="col">Antes da Meia-Noite</td>
+                    <td scope="col">Richard Linklater</td>
+                    <td scope="col"> 14 de junho de 20130</td>
+                    <td scope="col">Romance</td>
                 </tr>
             </tbody>
         </table>
+    </div>
+
+    <div class=" mb-5 mt-5">
+        <hr class="border-primary border-3 opacity-75" >
+        
+        <div class="container mb-5">
+            <h2 class="text-center mb-4">Cadastro de Filmes</h2>
+
+            <form>
+                <!--? Cadastro do  Código e  do titulo -->
+                <div class="row">
+                    <div class="mb-3 col">
+                        <label for="codFilm" class="form-label" >Código</label>
+                        <input type="text" class="form-control" id="codFilm">
+                    </div>
+                    <div class="mb-3 col">
+                        <label for="titleFilm" class="form-label">Título</label>
+                        <input type="text" class="form-control" id="title-Film">
+                    </div>
+                    <!--? Cadastro de diretor e lançamento-->
+                    <div class="row">
+                        <div class="mb-3 col">
+                            <label for="directorFilm" class="form-label">Diretor</label>
+                            <input type="text" class="form-control" id="directorFilm">
+                        </div>
+                        <div class="mb-3 col">
+                            <label for="yearFilm" class="form-label">Lançamento</label>
+                            <input type="text" class="form-control" id="yearFilm" placeholder="DD de MM de AA">
+                        </div>
+                    </div>
+                </div>
+                <div>
+
+                    <!--? Cadastro de gêneros-->
+
+                    <div class="row mt-3">
+                        <div class="col form-check ms-5">
+                            <input type="radio" id="radioGAcao" name="radio" class="form-check-input" value="acao">
+                            <label for="radioGAcao" class="form-label">Ação</label>
+                        </div>
+                        <div class="col form-check">
+                            <input type="radio" id="radioGAnim" name="radio" class="form-check-input" value="animacao">
+                            <label for="radioGAnim" class="form-label">Animação</label>
+                        </div>
+                        <div class=" col form-check">
+                            <input type="radio" id="radioGRoman" name="radio" class="form-check-input" value="romance">
+                            <label for="radioGRoman" class="form-label">Romance</label>
+
+                        </div>
+                        <div class=" col form-check">
+                            <input type="radio" id="radioGSus" name="radio" class="form-check-input" value="suspense">
+                            <label for="radioGSus" class="form-label">Suspense</label>
+                        </div>
+                    </div>
+                </div>
+                <!--? Botão enviar-->
+                <div class="col-auto d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary mt-3">Cadastrar</button>
+
+                </div>
+            </form>
+        </div>
     </div>
 
 </body>
