@@ -14,6 +14,8 @@
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
     crossorigin="anonymous"></script>
     <script src="script.js"></script>
+    <!--? JavaScript -->
+    <script src="./script.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-light">
@@ -37,14 +39,14 @@
                       </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#acadfilmes">Cadastrar filmes</a>
+                        <a class="nav-link" href="#cadfilmes">Cadastrar filmes</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <h1 class="display-1  text-center mb-5 mt-3">Locadora 2000</h1>
+    <h1 class="display-1  text-center mb-5 mt-3" id="#topo">Locadora 2000</h1>
 
 
     <div class="container">
@@ -56,11 +58,13 @@
                     <th scope="col">Diretor</th>
                     <th scope="col">Lançamento</th>
                     <th scope="col">Gêneros</th>
+                    <th scope="col">Ator/Atriz</th>
+                    <th scope="col">Nota IMDb</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <th class="text-center table-primary" colspan="5" id="gacao">
+                    <th class="text-center table-primary" colspan="7" id="gacao">
                         Ação
                     </th>
                 </tr>
@@ -70,6 +74,8 @@
                     <td scope="col">Sam Raimi</td>
                     <td scope="col">17 maio 2002</td>
                     <td scope="col">Ação</td>
+                    <td scope="col">Tobey Maguire</td>
+                    <td scope="col">7.4/10</td>
                 </tr>
                 <tr>
                     <th scope="row">2</th>
@@ -77,9 +83,11 @@
                     <td scope="col">Mike Newell</td>
                     <td scope="col">3 de Junho 20210</td>
                     <td scope="col">Ação</td>
+                    <td scope="col">Jake Gyllenhaal</td>
+                    <td scope="col">6.6/10</td>
                 </tr>
                 <tr>
-                    <th class="text-center table-primary" colspan="5" id="ganim">
+                    <th class="text-center table-primary" colspan="7" id="ganim">
                         Animação
                     </th>
                 </tr>
@@ -89,6 +97,8 @@
                     <td scope="col">Emma De Swaef</td>
                     <td scope="col"> 14 de janeiro de 2022</td>
                     <td scope="col">Animação</td>
+                    <td scope="col">Mia Goth</td>
+                    <td scope="col">6.8/10</td>
                 </tr>
                 <tr>
                     <th scope="row">4</th>
@@ -96,9 +106,11 @@
                     <td scope="col">Peggy Holmes</td>
                     <td scope="col"> 5 de agosto de 2022</td>
                     <td scope="col">Animação</td>
+                    <td scope="col">Eva Noblezada</td>
+                    <td scope="col">6.4/10</td>
                 </tr>
                 <tr>
-                    <th class="text-center table-primary" colspan="5" id="gsus">
+                    <th class="text-center table-primary" colspan="7" id="gsus">
                         Suspense
                     </th>
                 </tr>
@@ -108,6 +120,8 @@
                     <td scope="col">Jordan Peele</td>
                     <td scope="col"> 25 de agosto de 2022</td>
                     <td scope="col">Suspense</td>
+                    <td scope="col">Daniel Kaluuya</td>
+                    <td scope="col">6.8/10</td>
                 </tr>
                 <tr>
                     <th scope="row">6</th>
@@ -115,9 +129,11 @@
                     <td scope="col">George Clooney</td>
                     <td scope="col"> 23 de dezembro de 2020</td>
                     <td scope="col">Suspense</td>
+                    <td scope="col">George Clooney</td>
+                    <td scope="col">5.7/10</td>
                 </tr>
                 <tr>
-                    <th class="text-center table-primary" colspan="5" id="gsus">
+                    <th class="text-center table-primary" colspan="7" id="groman">
                         Romance
                     </th>
                 </tr>
@@ -127,6 +143,8 @@
                     <td scope="col">Sam Mendes</td>
                     <td scope="col">  30 de janeiro de 2009</td>
                     <td scope="col">Romance</td>
+                    <td scope="col">Kate Winslet</td>
+                    <td scope="col">7.3/10</td>
                 </tr>
                 <tr>
                     <th scope="row">8</th>
@@ -134,7 +152,10 @@
                     <td scope="col">Richard Linklater</td>
                     <td scope="col"> 14 de junho de 20130</td>
                     <td scope="col">Romance</td>
+                    <td scope="col">Ethan Hawke</td>
+                    <td scope="col">7.9/10</td>
                 </tr>
+                <tr id="insertRow"></tr>
             </tbody>
         </table>
     </div>
@@ -142,29 +163,40 @@
     <div class=" mb-5 mt-5">
         <hr class="border-primary border-3 opacity-75" >
         
-        <div class="container mb-5">
+        <div class="container mb-5" id="cadfilmes">
             <h2 class="text-center mb-4">Cadastro de Filmes</h2>
 
-            <form>
+            <form name="register" onsubmit="event.preventDefault()">
                 <!--? Cadastro do  Código e  do titulo -->
                 <div class="row">
                     <div class="mb-3 col">
                         <label for="codFilm" class="form-label" >Código</label>
-                        <input type="text" class="form-control" id="codFilm">
+                        <input type="text" class="form-control" id="codFilm" name="cod">
                     </div>
                     <div class="mb-3 col">
                         <label for="titleFilm" class="form-label">Título</label>
-                        <input type="text" class="form-control" id="title-Film">
+                        <input type="text" class="form-control" id="title-Film" name="title">
                     </div>
                     <!--? Cadastro de diretor e lançamento-->
                     <div class="row">
                         <div class="mb-3 col">
                             <label for="directorFilm" class="form-label">Diretor</label>
-                            <input type="text" class="form-control" id="directorFilm">
+                            <input type="text" class="form-control" id="directorFilm" name="director">
                         </div>
                         <div class="mb-3 col">
                             <label for="yearFilm" class="form-label">Lançamento</label>
-                            <input type="text" class="form-control" id="yearFilm" placeholder="DD de MM de AA">
+                            <input type="text" class="form-control" id="yearFilm" placeholder="DD de MM de AA" name="date">
+                        </div>
+                    </div>
+                     <!--? Ator/ atriz  e Nota-->
+                     <div class="row">
+                        <div class="mb-3 col">
+                            <label for="atorFilm" class="form-label">Ator/atriz</label>
+                            <input type="text" class="form-control" id="atorFilm">
+                        </div>
+                        <div class="mb-3 col">
+                            <label for="notaFilm" class="form-label">Nota IMDb</label>
+                            <input type="text" class="form-control" id="notaFilm">
                         </div>
                     </div>
                 </div>
@@ -194,7 +226,7 @@
                 </div>
                 <!--? Botão enviar-->
                 <div class="col-auto d-flex justify-content-center">
-                    <button type="submit" class="btn btn-primary mt-3">Cadastrar</button>
+                    <button onclick="validationForm(); insert()" type="submit" class="btn btn-primary mt-3">Cadastrar</button>
 
                 </div>
             </form>
